@@ -25,7 +25,6 @@
                 <input type="text" id="name" v-model="product.name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <div v-if="errors.name">
                 <span class="text-sm text-red-400">{{ errors.name[0] }}</span>
-    
                 </div>
             </div>   
             <div class="mb-6">
@@ -37,16 +36,12 @@
             </div>
             <div class="mb-6">
                 <label for="type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Type</label>
-                <input type="text" id="type" v-model="product.type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <div v-if="errors.type">
+                <select id="type" v-model="product.type" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="item">Item</option>
+                <option value="service">Service</option>
+            </select>                
+            <div v-if="errors.type">
                 <span class="text-sm text-red-400">{{ errors.type[0] }}</span>
-                </div>
-            </div>
-            <div class="mb-6">
-                <label for="person" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Person</label>
-                <input type="text" id="person" v-model="product.person" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <div v-if="errors.person">
-                <span class="text-sm text-red-400">{{ errors.person[0] }}</span>
                 </div>
             </div>
             <div class="mt-4">

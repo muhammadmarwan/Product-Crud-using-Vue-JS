@@ -53,7 +53,7 @@ onMounted(()=>getProducts());
                     {{ product.type }}
                 </td>
                 <td class="py-4 px-6">
-                    {{ product.status }}
+                    {{ product.status==1  ? "Active" : "Hide"}} 
                 </td>
                 <td class="py-4 px-6 space-x-2">
                     <RouterLink :to="{name: 'ProductEdit', params: {id: product.id}}" class="px-4 py-2 bg-indigo-500 hover:bg-indigo-800 text-white rounded">
