@@ -51,7 +51,7 @@ onMounted(()=>getProducts());
                 </td>
                 <td class="py-4 px-6">
                     {{ product.type }}
-                </td>
+                </td> 
                 <td class="py-4 px-6">
                     {{ product.status==1  ? "Active" : "Hide"}} 
                 </td>
